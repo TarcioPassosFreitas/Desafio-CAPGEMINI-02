@@ -1,0 +1,10 @@
+package Quest3;
+
+public class MensagemEncriptada {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

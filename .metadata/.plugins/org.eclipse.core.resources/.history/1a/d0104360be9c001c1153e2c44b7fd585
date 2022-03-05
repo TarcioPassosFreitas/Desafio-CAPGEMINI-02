@@ -1,0 +1,43 @@
+package Quest1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+/**
+ * @author tpfre
+ *
+ */
+public class Mediana {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite quantos valores deseja na lista:");
+		int quantidade = sc.nextInt();
+		System.out.println("Digite os números que deseja colocar na lista:");
+		int[] arrayNumeros = new int[quantidade];
+		for (int i = 0; i < arrayNumeros.length; i++) {
+			arrayNumeros[i] = sc.nextInt();
+		}
+		System.out.println(calcular(arrayNumeros));
+
+		sc.close();
+	}
+	
+	/**
+	 * @param arrayNumeros um array com números aleatórios
+	 * @return mediana retorna o valor da mediana
+	 */
+	public static int calcular(int[] arrayNumeros) {
+		int mediana = 0;
+		Arrays.sort(arrayNumeros); //ordenando o array
+
+		if ((arrayNumeros.length % 2) == 0) {
+			mediana = (arrayNumeros[(arrayNumeros.length / 2) - 1] + arrayNumeros[arrayNumeros.length / 2]) / 2;
+			return mediana;
+		} else {
+			mediana = arrayNumeros[(arrayNumeros.length / 2)];
+			return mediana;
+		}
+	}
+
+}

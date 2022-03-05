@@ -1,0 +1,17 @@
+package Quest3Teste;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import Quest3.Criptografia;
+
+public class TestCriptografia {
+	
+	@Test
+	public void testValorDaMensagem() {
+		String s = "tenha um bom dia";
+		Criptografia cript = new Criptografia(s);
+		assertEquals(cript.getMensagem(), s);
+	}
+}

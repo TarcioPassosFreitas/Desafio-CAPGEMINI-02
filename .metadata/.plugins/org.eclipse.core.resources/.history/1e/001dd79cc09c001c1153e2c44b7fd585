@@ -1,0 +1,71 @@
+package Quest2;
+
+import java.util.Arrays;
+
+/**
+ * @author tpfre
+ * Essa classe é responsável por receber um vetor de números e um número para comparação.
+ * cada número do vetor, subtraido com outro número do vetor tem que ter o mesmo valor do número de comparação x.
+ */
+public class ElementosPares {
+	private int[] vect;
+	private int x;
+	
+	/**
+	 * @param vect array de números desejados
+	 * @param x número para comparação
+	 */
+	public ElementosPares(int[] vect, int x) {
+		this.vect = vect;
+		this.x = x;
+	}
+
+	/**
+	 * @return vetor com os números
+	 */
+	public int[] getVect() {
+		return vect;
+	}
+
+	/**
+	 * @param vect alteração no vetor
+	 */
+	public void setVect(int[] vect) {
+		this.vect = vect;
+	}
+
+	/**
+	 * @return número para comparação
+	 */
+	public int getX() {
+		return x;
+	}
+
+	/**
+	 * @param x alteração do número para comparação
+	 */
+	public void setX(int x) {
+		this.x = x;
+	}
+	
+	/**
+	 * @return contador com o número de pares cujo a diferença é igual ao número de comparação
+	 * Método responsável por verificar se a diferença dos valores do array é igual ao valor de compração
+	 */
+	public int pares() {
+		int cont = 0;
+		Arrays.sort(vect);
+		for(int i = 0; i < vect.length; i++) {
+			for(int j = 0; j < vect.length; j++) {
+				if(vect[i] - vect[j] == x) {
+					cont++;
+					
+				}
+			}
+		}
+		
+		return cont;
+	}
+	
+	
+}

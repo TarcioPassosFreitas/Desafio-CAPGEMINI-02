@@ -1,0 +1,26 @@
+package Quest1;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Mediana {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		List<Integer> listaNumeros = new ArrayList<>();
+		System.out.println("Digite quantos valores deseja na lista:");
+		int quantidade = sc.nextInt();
+		System.out.println("Digite os números que deseja colocar na lista:");
+		for(int i = 0; i < quantidade; i++) {
+			listaNumeros.add(sc.nextInt());
+		}
+		
+		Collections.sort(listaNumeros);
+		System.out.println(listaNumeros);
+		System.out.println(listaNumeros.size());
+		System.out.println(listaNumeros.indexOf((listaNumeros.size()) / 2));
+	}
+
+}

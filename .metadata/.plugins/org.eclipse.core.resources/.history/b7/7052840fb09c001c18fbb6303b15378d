@@ -1,0 +1,24 @@
+package Principal;
+
+import Quest1.Calcular;
+import Quest2.Elementos;
+import Quest3.Criptografia;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int[] arr = {9,2,1,4,6};
+		Calcular cal = new Calcular(arr);
+		System.out.println(cal.calcularMediana());
+		
+		int[] n = {1,5,3,4,2};
+		Elementos elm = new Elementos(n, 2);
+		System.out.println(elm.pares());
+		
+		String mensagem = "tenha um bom dia";
+		Criptografia cript = new Criptografia(mensagem);
+		System.out.println(cript.encriptando());
+
+	}
+
+}

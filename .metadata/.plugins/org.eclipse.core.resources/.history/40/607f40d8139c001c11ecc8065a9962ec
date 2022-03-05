@@ -1,0 +1,40 @@
+package Quest2;
+
+import java.util.Scanner;
+
+public class ElementosPares {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite quantos valores deseja na lista: ");
+		int quantidade = sc.nextInt();
+		System.out.println("Digite um inteiro para comparação: ");
+		int x = sc.nextInt();
+		int[] vect = new int[quantidade];
+		System.out.println("Digite os números que deseja colocar na lista:");
+		for(int i = 0; i < quantidade; i++) {
+			vect[i] = sc.nextInt();
+		}
+		
+		System.out.println(elementos(vect, x));
+		
+		
+		sc.close();
+
+	}
+	
+	public static int elementos(int[] vect, int x) {
+		int cont = 0; 
+		for(int i = vect.length- 1; i > 0; i--) {
+			for(int j = 0; j < i; j++) {
+				if(vect[j+1] - vect[j] == x) {
+					cont++;
+					
+				}
+			}
+		}
+		
+		return cont;
+	}
+
+}

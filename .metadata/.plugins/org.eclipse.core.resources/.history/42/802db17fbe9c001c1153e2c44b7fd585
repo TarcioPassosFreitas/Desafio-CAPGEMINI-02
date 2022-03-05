@@ -1,0 +1,62 @@
+package Quest3;
+
+import java.util.Scanner;
+
+/**
+ * @author tpfre
+ *
+ */
+public class MensagemEncriptada {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String mensagem = sc.nextLine();
+		
+		String recebido = encriptando(mensagem);
+		System.out.println(recebido);
+		
+		
+		
+		sc.close();
+
+	}
+	
+	/**
+	 * @param mensagem frase com as mensagem para ser codificada
+	 * @return fraseEncriptada a mensagem já codificada
+	 */
+	public static String encriptando(String mensagem) {
+		String mensagemUnida = mensagem.replaceAll("\\s+", ""); // retirando espaços da mensagem
+		int tamanho = mensagemUnida.length();
+		int linhaxColuna = (int) Math.round(Math.sqrt(tamanho)); // espaço do vetor, levando em conta uma aproximação para cima
+		char[][] mensagemEncriptada = new char[linhaxColuna][linhaxColuna]; //matriz para pegar cada letra e colocar na posição pedida
+		int aux = 0;
+		for(int i = 0; i < linhaxColuna; i++) {
+			for(int j = 0; j < linhaxColuna; j++) {
+				if(aux >= tamanho) { //verifica se o valor da posição da string está dentro do intervalo, para não dar erro
+					break;
+				}
+				mensagemEncriptada[i][j] = mensagemUnida.charAt(aux);
+				aux++;
+			}
+		}
+		
+		String fraseEncriptada = ""; 
+		for(int i = 0; i < linhaxColuna; i++) {
+			for(int j = 0; j < linhaxColuna; j++) {
+				fraseEncriptada += mensagemEncriptada[j][i]; //pegar a frase encriptada
+				if((j + 1) == linhaxColuna) {
+					if(mensagemEncriptada[j][i] != '\u0000') { //verifica se a posição do char está vazio ou se tem algo, para dar o espaçamento certo
+						fraseEncriptada += " ";
+					}
+				}
+			}
+		}
+		
+		
+		
+		return fraseEncriptada;
+	}
+	
+}

@@ -1,0 +1,43 @@
+package Quest1Teste;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import Quest1.Calcular;
+
+public class TestMediana {
+	
+	@Test
+	public void testValorDoArray() {
+		double[] arr1 = {9,2,1,4,6};
+		Calcular cal1 = new Calcular(arr1);
+		assertEquals(arr1, cal1.getArray());
+		
+		double[] arr2 = {10,12,13,14,14,15,15,18,19,20};
+		Calcular cal2 = new Calcular(arr2);
+		assertEquals(arr2, cal2.getArray());
+	}
+	
+	@Test
+	public void testMedianaPar() {
+		double[] arr1 = {10,12,13,14,14,15,15,18,19,20};
+		Calcular cal1 = new Calcular(arr1);
+		assertEquals(cal1.calcularMediana(), 14.5);
+		
+		double[] arr2 = {30,25,50,75,90,80};
+		Calcular cal2 = new Calcular(arr2);
+		assertEquals(cal2.calcularMediana(), 62.5);
+	}
+	
+	@Test
+	public void testMedianaImpar() {
+		double[] arr1 = {9,2,1,4,6};
+		Calcular cal1 = new Calcular(arr1);
+		assertEquals(cal1.calcularMediana(), 4);
+		
+		double[] arr2 = {55, 60, 90, 120, 200, 300, 500, 1000, 1200};
+		Calcular cal2 = new Calcular(arr2);
+		assertEquals(cal2.calcularMediana(), 200);
+	}
+}

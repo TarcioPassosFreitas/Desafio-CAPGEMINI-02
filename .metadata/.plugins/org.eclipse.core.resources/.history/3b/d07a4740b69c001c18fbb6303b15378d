@@ -1,0 +1,52 @@
+package Quest1;
+
+import java.util.Arrays;
+
+/**
+ * @author tpfre
+ * Classe responsável por receber array com números e deve encontrar a mediana
+ *
+ */
+public class Calcular {
+	int[] array;
+
+	/**
+	 * @param arrayNumeros array com valores vem como referência
+	 * O array já recebe o vetor ordenado para no método achar a mediana
+	 */
+	public Calcular(int[] arrayNumeros) {
+		Arrays.sort(arrayNumeros); // ordenando o array
+		array = arrayNumeros;
+	}
+
+	/**
+	 * @return retorna o array
+	 */
+	public int[] getArray() {
+		return array;
+	}
+
+	/**
+	 * @param array fazer alteração no array
+	 */
+	public void setArray(int[] array) {
+		this.array = array;
+	}
+	
+	
+	/**
+	 * @return retorna o valor da mediana
+	 * Método responsável por calcular a mediana do array
+	 */
+	public double calcularMediana() {
+		double mediana = 0;
+
+		if ((array.length % 2) == 0) {
+			mediana = (array[(array.length / 2) - 1] + array[array.length / 2]) / 2;
+			return mediana;
+		} else {
+			mediana = array[(array.length / 2)];
+			return mediana;
+		}
+	}
+}

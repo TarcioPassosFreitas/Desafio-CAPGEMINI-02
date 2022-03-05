@@ -1,0 +1,74 @@
+package Quest3;
+
+/**
+ * @author tpfre
+ *Essa classe é responsável por receber uma mensagem e fazer a criptografia dessa mensagem
+ */
+public class Criptografia {
+	private String mensagem;
+	
+	/**
+	 * @param mensagem Recebe uma mensagem que deseja ser criptografada
+	 */
+	public Criptografia(String mensagem) {
+		this.mensagem = mensagem;
+	}
+
+	/**
+	 * @return Pega o valor da mensagem
+	 */
+	public String getMensagem() {
+		return mensagem;
+	}
+
+	/**
+	 * @param mensagem pode fazer alteração do valor da mensagem
+	 */
+	public void setMensagem(String mensagem) {
+		this.mensagem = mensagem;
+	}
+	
+	/**
+	 * @return será retornado a mensagem já encriptada
+	 * Método responsável por encriptar
+	 * Vai retirar os espaços da mensagem
+	 * Criar uma matriz levando em consideração uma aproximação para cima da raíz quadrada do tamanho da String sem espaços
+	 * Pegar os valores de cada coluna e colocar na string que vai conter a mensagem já encriptada
+	 */
+	public String encriptando() {
+		String mensagemUnida = mensagem.replaceAll("\\s+", ""); // retirando espaços da mensagem
+		int tamanho = mensagemUnida.length();
+		int linhaxColuna = (int) Math.round(Math.sqrt(tamanho)); // espaço do vetor, levando em conta uma aproximação para cima
+		char[][] mensagemEncriptada = new char[linhaxColuna][linhaxColuna]; //matriz para pegar cada letra e colocar na posição pedida
+		int aux = 0; //simboliza o índice que vamos pegar da String
+		for(int i = 0; i < linhaxColuna; i++) {
+			for(int j = 0; j < linhaxColuna; j++) {
+				if(aux >= tamanho) { //verifica se o valor da posição da string está dentro do intervalo, para não dar erro
+					break;
+				}
+				mensagemEncriptada[i][j] = mensagemUnida.charAt(aux);
+				aux++;
+			}
+		}
+		
+		String fraseEncriptada = ""; 
+		for(int i = 0; i < linhaxColuna; i++) {
+			for(int j = 0; j < linhaxColuna; j++) {
+				if((j + 1) == linhaxColuna && (i + 1) == linhaxColuna) {
+					break;
+				}else {
+					fraseEncriptada += mensagemEncriptada[j][i]; //pegar a frase encriptada
+				}
+				if((j + 1) == linhaxColuna) { // Verifica se é o último loop desse for
+					if(mensagemEncriptada[j][i] != '\u0000') { //verifica se a posição do char está vazio ou se tem algo, para dar o espaçamento certo
+						fraseEncriptada += " ";
+					}
+				}
+			}
+		}
+		
+		
+		
+		return fraseEncriptada;
+	}
+}

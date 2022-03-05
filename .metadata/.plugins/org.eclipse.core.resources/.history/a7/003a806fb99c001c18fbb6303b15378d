@@ -1,0 +1,28 @@
+package Quest2Teste;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import Quest2.Elementos;
+
+public class TestElementos {
+	@Test
+	public void testValorDoArray() {
+		int[] n = {1,5,3,4,2};
+		int x = 2;
+		Elementos elem = new Elementos(n, x);
+		assertEquals(elem.getVect(), n);
+		assertEquals(elem.getX(), x);
+	}
+	
+	@Test
+	public void testPares() {
+		int[] n = {1,5,3,4,2};
+		int x = 2;
+		Elementos elem = new Elementos(n, x);
+		assertEquals(elem.pares(), 3);
+		
+		
+	}
+}

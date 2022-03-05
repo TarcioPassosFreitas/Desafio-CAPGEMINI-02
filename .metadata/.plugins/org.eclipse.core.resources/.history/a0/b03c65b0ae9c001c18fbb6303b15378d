@@ -1,0 +1,45 @@
+package Quest1;
+
+import java.util.Arrays;
+
+public class Calcular {
+	int[] array;
+
+	/**
+	 * @param arrayNumeros array com valores vem como referência
+	 */
+	public Calcular(int[] arrayNumeros) {
+		Arrays.sort(arrayNumeros); // ordenando o array
+		array = arrayNumeros;
+	}
+
+	/**
+	 * @return retorna o array
+	 */
+	public int[] getArray() {
+		return array;
+	}
+
+	/**
+	 * @param array fazer alteração no array
+	 */
+	public void setArray(int[] array) {
+		this.array = array;
+	}
+	
+	
+	/**
+	 * @return retorna o valor da mediana
+	 */
+	public int calcularMediana() {
+		int mediana = 0;
+
+		if ((array.length % 2) == 0) {
+			mediana = (array[(array.length / 2) - 1] + array[array.length / 2]) / 2;
+			return mediana;
+		} else {
+			mediana = array[(array.length / 2)];
+			return mediana;
+		}
+	}
+}

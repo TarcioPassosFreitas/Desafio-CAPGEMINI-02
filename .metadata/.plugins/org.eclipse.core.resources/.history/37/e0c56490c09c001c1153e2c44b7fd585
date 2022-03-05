@@ -1,0 +1,38 @@
+package Quest3Teste;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import Quest3.Criptografia;
+
+/**
+ * @author tpfre
+ *Classe responsável pelos testes da classe Criptografia
+ */
+public class TestCriptografia {
+	
+	/**
+	 *  Método responsável em verificar se o valor passado como parâmetro para a classe está correto
+	 */
+	@Test
+	public void testValorDaMensagem() {
+		String s = "tenha um bom dia";
+		Criptografia cript = new Criptografia(s);
+		assertEquals(cript.getMensagem(), s);
+	}
+	
+	/**
+	 * Método responsável em verificar se a frase criptografada que é retornada, realmente está criptografada de forma correta
+	 */
+	@Test
+	public void testMensagemCriptografada() {
+		String s1 = "tenha um bom dia";
+		Criptografia cript1 = new Criptografia(s1);
+		assertEquals(cript1.encriptando(), "taoa eum nmd hbi");
+		
+		String s2 = "ola mundo";
+		Criptografia cript2 = new Criptografia(s2);
+		assertEquals(cript2.encriptando(), "omd luo an");
+	}
+}

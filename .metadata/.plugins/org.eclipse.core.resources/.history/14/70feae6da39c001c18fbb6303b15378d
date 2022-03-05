@@ -1,0 +1,54 @@
+package Quest3;
+
+import java.util.Scanner;
+
+public class MensagemEncriptada {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String mensagem = sc.nextLine();
+		
+		String recebido = encriptando(mensagem);
+		System.out.println(recebido);
+		
+		
+		
+		sc.close();
+
+	}
+	
+	public static String encriptando(String mensagem) {
+		String mensagemUnida = mensagem.replaceAll("\\s+", "");
+		int tamanho = mensagemUnida.length();
+		int linhaxColuna = (int) Math.round(Math.sqrt(tamanho));
+		char[][] mensagemEncriptada = new char[linhaxColuna][linhaxColuna];
+		int aux = 0;
+		for(int i = 0; i < linhaxColuna; i++) {
+			for(int j = 0; j < linhaxColuna; j++) {
+				if(aux >= tamanho) {
+					break;
+				}
+				mensagemEncriptada[i][j] = mensagemUnida.charAt(aux);
+				aux++;
+			}
+		}
+		
+		String fraseEncriptada = "";
+		for(int i = 0; i < linhaxColuna; i++) {
+			for(int j = 0; j < linhaxColuna; j++) {
+				fraseEncriptada += mensagemEncriptada[j][i];
+				if((j + 1) == linhaxColuna) {
+					if(mensagemEncriptada[j][i] != '\u0000') {
+						fraseEncriptada += " ";
+					}
+				}
+			}
+		}
+		
+		
+		
+		return fraseEncriptada;
+	}
+	
+}

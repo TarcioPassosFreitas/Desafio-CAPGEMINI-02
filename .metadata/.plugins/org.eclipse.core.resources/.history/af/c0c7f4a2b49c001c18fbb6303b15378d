@@ -1,0 +1,11 @@
+package Quest1Teste;
+
+import org.junit.jupiter.api.Test;
+
+public class MedianaTeste {
+	
+	@Test
+	public void testCalcular() {
+		
+	}
+}
