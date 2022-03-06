@@ -66,7 +66,7 @@
 		<item key="destdir" value="D:\DESAFIO-CAPGEMINI\Desafio\doc"/>
 		<section name="projects">
 			<section name="Desafio">
-				<item key="href" value=""/>
+				<item key="href" value="file:/D:/DESAFIO-CAPGEMINI/Desafio/doc/"/>
 				<item key="destdir" value="D:\DESAFIO-CAPGEMINI\Desafio\doc"/>
 				<item key="antpath" value="D:\DESAFIO-CAPGEMINI\Desafio\javadoc.xml"/>
 			</section>
