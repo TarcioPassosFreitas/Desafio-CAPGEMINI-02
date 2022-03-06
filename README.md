@@ -18,13 +18,15 @@ Desafio de programação CAPGEMINI 02. 3 Questões com diferentes níveis de dif
 - Dentro da pasta Desafio tem a pasta src
 
 
-![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 20_28_46](https://user-images.githubusercontent.com/66507096/156903129-331cd0e6-4ba0-4bbd-93df-b6f7d76c0899.png)
+
+![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 21_44_00](https://user-images.githubusercontent.com/66507096/156904573-62d4affe-2592-43c4-9621-a889bb11700c.png)
 
 
 - Dentro da pasta src, terá 4 pacotes. No principal está a Main do programa e os pacotes restantes estão as classes referenciando as questões
 
 
-![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 20_29_07](https://user-images.githubusercontent.com/66507096/156903153-639a1447-756c-4423-a613-5561122d8cc1.png)
+
+![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 21_44_49](https://user-images.githubusercontent.com/66507096/156904584-3d5569e0-6101-4fdb-b19f-21da4d076afc.png)
 
 
 ## Onde estão os testes?
@@ -37,13 +39,16 @@ Desafio de programação CAPGEMINI 02. 3 Questões com diferentes níveis de dif
 - Dentro da pasta Desafio tem a pasta testes
 
 
-![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 20_34_52](https://user-images.githubusercontent.com/66507096/156903249-54d48f67-6116-4672-a557-b737b219769a.png)
+![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 21_44_14](https://user-images.githubusercontent.com/66507096/156904610-32dff1db-ea39-471e-ab94-798bce203abf.png)
+
 
 
 - Dentro da pasta testes, terá 3 pacotes. dentro de cada pacote estará a classe teste referenciando cada questão
 
 
-![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 20_35_10](https://user-images.githubusercontent.com/66507096/156903267-f7511da3-8972-43e8-a5af-7f1236990353.png)
+![TarcioPassosFreitas_Desafio-CAPGEMINI-02_ Desafio de programação CAPGEMINI 02 - Google Chrome 05_03_2022 21_44_28](https://user-images.githubusercontent.com/66507096/156904621-73519ac5-cd3f-49a1-ac65-3cce5642c39e.png)
+
+
 
 
 # Instruções de como rodar os testes
@@ -52,7 +57,8 @@ Desafio de programação CAPGEMINI 02. 3 Questões com diferentes níveis de dif
 - No exemplo, será utilizado a classe TestMediana
 
 
-![DESAFIO-CAPGEMINI - Desafio_testes_Quest1Teste_TestMediana java - Eclipse IDE 05_03_2022 20_44_03](https://user-images.githubusercontent.com/66507096/156903406-4359765d-0896-4ca1-af54-af12b26342fb.png)
+![DESAFIO-CAPGEMINI - Desafio_tests_Quest1Teste_TestMediana java - Eclipse IDE 05_03_2022 21_51_36](https://user-images.githubusercontent.com/66507096/156904652-2492c253-bd79-4806-a047-8f17a32a662d.png)
+
 
 
 - Depois que abrir a classe, é necessário que aperte o botão direito do mouse (em cima da classe), vai até Run As e aperte em jUnit test
@@ -61,7 +67,8 @@ Desafio de programação CAPGEMINI 02. 3 Questões com diferentes níveis de dif
 - No caso, todos os testes estão corretor, então aparecerá a barra verde
 
 
-![DESAFIO-CAPGEMINI - Desafio_testes_Quest1Teste_TestMediana java - Eclipse IDE 05_03_2022 20_49_32](https://user-images.githubusercontent.com/66507096/156903517-e54d3653-b334-4448-87b9-3ea6488cb4c0.png)
+![DESAFIO-CAPGEMINI - Desafio_tests_Quest1Teste_TestMediana java - Eclipse IDE 05_03_2022 21_53_25](https://user-images.githubusercontent.com/66507096/156904665-794b42de-3d88-4de2-947c-939422e6c3b2.png)
+
 
 
 # Intruções de como gerar a documentação Javadoc
